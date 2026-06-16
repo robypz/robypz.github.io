@@ -286,14 +286,14 @@
         <button type="button" data-lang="es"
           class="lang-opt px-2.5 py-1 font-label-code text-[12px] font-bold transition-colors">ES</button>
       </div>
-      <a href="#" target="_blank" rel="noopener" aria-label="GitHub"
+      <a href="https://github.com/robypz" target="_blank" rel="noopener" aria-label="GitHub"
         class="text-secondary hover:text-neon-lime transition-colors">
         <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
           <path
             d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.01-.02-1.98-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56C20.71 21.38 24 17.08 24 12 24 5.73 18.77.5 12 .5z" />
         </svg>
       </a>
-      <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"
+      <a href="https://www.linkedin.com/in/robypz/" target="_blank" rel="noopener" aria-label="LinkedIn"
         class="text-secondary hover:text-neon-lime transition-colors">
         <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
           <path
@@ -443,10 +443,10 @@
     class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-surface-border flex flex-col items-center gap-stack-md py-stack-md px-gutter mb-20 md:mb-0"
     id="contact">
     <div class="flex gap-6">
-      <a class="font-body-md text-body-md text-subtle-gray hover:text-neon-lime transition-colors" href="#"
-        target="_blank" rel="noopener">GitHub</a>
-      <a class="font-body-md text-body-md text-subtle-gray hover:text-neon-lime transition-colors" href="#"
-        target="_blank" rel="noopener">LinkedIn</a>
+      <a class="font-body-md text-body-md text-subtle-gray hover:text-neon-lime transition-colors"
+        href="https://github.com/robypz" target="_blank" rel="noopener">GitHub</a>
+      <a class="font-body-md text-body-md text-subtle-gray hover:text-neon-lime transition-colors"
+        href="https://www.linkedin.com/in/robypz/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="font-body-md text-body-md text-neon-lime underline hover:text-primary transition-colors"
         href="https://www.workana.com/" target="_blank" rel="noopener">Workana</a>
       <a data-i18n="footer-email"
@@ -568,6 +568,34 @@
     ========================================================= */
     const PROJECTS = [
       {
+        id: "babiecasmart",
+        name: "Babieca Smart",
+        subtitle: { en: "Custom smart home ecosystem and automation platform", es: "Ecosistema de hogar inteligente personalizado y automatización" },
+        client: { en: "Babieca Smart", es: "Babieca Smart" },
+        meta: { en: "2026", es: "2026" },
+        images: 5,
+        tags: ["Angular", "TypeScript", "Tailwind CSS", "Flowbite", "IoT", "REST API"],
+        url: "https://babiecasmart.es",
+        description: {
+          en: "A customized smart home platform designed to manage and monitor home automation devices. Built with an Angular frontend styled with Tailwind CSS and Flowbite, the ecosystem enables real-time remote control of security cameras, smart relays, temperature programming, and decibel-level noise monitoring.",
+          es: "Plataforma de hogar inteligente personalizada diseñada para gestionar y monitorizar dispositivos domésticos. Desarrollada con un frontend en Angular utilizando Tailwind CSS y Flowbite, el ecosistema permite control remoto en tiempo real de cámaras de seguridad, relés inteligentes, programación de temperatura y control de ruido por decibelios."
+        }
+      },
+      {
+        id: "citylok",
+        name: "Citylok",
+        subtitle: { en: "Global event-discovery platform and promoter tools", es: "Buscador de eventos geolocalizados y herramientas para promotores" },
+        client: { en: "Citylok", es: "Citylok" },
+        meta: { en: "2025", es: "2026" },
+        images: 8,
+        tags: ["PHP", "Laravel", "PostgreSQL", "Angular", "TypeScript", "REST API"],
+        url: "https://citylok.com",
+        description: {
+          en: "A geolocalized event-discovery platform and management ecosystem for organizers. Built with an Angular frontend and a PHP/Laravel backend utilizing PostgreSQL, featuring real-time event indexing, custom user calendars, and promoter analytical dashboards with QR code validation.",
+          es: "Plataforma de descubrimiento de eventos geolocalizados y sistema de gestión para organizadores. Desarrollada con un frontend en Angular y un backend en PHP/Laravel con PostgreSQL, que incluye publicación de eventos en tiempo real, agendas personalizadas y paneles analíticos para promotores con validación de accesos vía QR."
+        }
+      },
+      {
         id: "hospital",
         name: "Sistema Hospitalario",
         subtitle: { en: "Administrative system for healthcare centers", es: "Sistema administrativo para centros de salud" },
@@ -579,20 +607,6 @@
         description: {
           en: "Administrative platform for healthcare centers covering patient records, appointment scheduling, medical staff management and operational reporting. Built on a Laravel backend with a normalized MySQL schema and a responsive dashboard for day-to-day clinical operations.",
           es: "Plataforma administrativa para centros de salud que cubre historiales de pacientes, gestión de citas, administración del personal médico e informes operativos. Construida sobre un backend en Laravel con un esquema MySQL normalizado y un panel responsive para las operaciones clínicas del día a día."
-        }
-      },
-      {
-        id: "citylok",
-        name: "Citylok",
-        subtitle: { en: "Global event-discovery platform and promoter tools", es: "Buscador de eventos geolocalizados y herramientas para promotores" },
-        client: { en: "Citylok", es: "Citylok" },
-        meta: { en: "2024", es: "2024" },
-        images: 8,
-        tags: ["PHP", "Laravel", "PostgreSQL", "Angular", "TypeScript", "REST API"],
-        url: "https://citylok.com",
-        description: {
-          en: "A geolocalized event-discovery platform and management ecosystem for organizers. Built with an Angular frontend and a PHP/Laravel backend utilizing PostgreSQL, featuring real-time event indexing, custom user calendars, and promoter analytical dashboards with QR code validation.",
-          es: "Plataforma de descubrimiento de eventos geolocalizados y sistema de gestión para organizadores. Desarrollada con un frontend en Angular y un backend en PHP/Laravel con PostgreSQL, que incluye publicación de eventos en tiempo real, agendas personalizadas y paneles analíticos para promotores con validación de accesos vía QR."
         }
       },
       {
