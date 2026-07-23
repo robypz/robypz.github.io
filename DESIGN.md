@@ -1,57 +1,63 @@
 ---
-name: Neon Developer Portfolio
+name: Warm CV-Inspired Portfolio
 colors:
-  surface: '#131313'
-  surface-dim: '#131313'
-  surface-bright: '#3a3939'
-  surface-container-lowest: '#0e0e0e'
-  surface-container-low: '#1c1b1b'
-  surface-container: '#201f1f'
-  surface-container-high: '#2a2a2a'
-  surface-container-highest: '#353534'
-  on-surface: '#e5e2e1'
-  on-surface-variant: '#c0cab1'
-  inverse-surface: '#e5e2e1'
-  inverse-on-surface: '#313030'
-  outline: '#8a947d'
-  outline-variant: '#404a36'
+  surface: '#FFFFFF'
+  surface-dim: '#FFFCF8'
+  surface-bright: '#FFFFFF'
+  surface-container-lowest: '#F7EEE2'
+  surface-container-low: '#FBF5EC'
+  surface-container: '#FBF5EC'
+  surface-container-high: '#F3E6D3'
+  surface-container-highest: '#EEDDC4'
+  on-surface: '#241C13'
+  on-surface-variant: '#5C5347'
+  inverse-surface: '#241C13'
+  inverse-on-surface: '#FFFCF8'
+  outline: '#C9BBA3'
+  outline-variant: '#E9DCC7'
   surface-tint: '#FFBD47'
-  primary: '#ffffff'
-  on-primary: '#1a3700'
+  primary: '#211A14'
+  on-primary: '#FFFFFF'
   primary-container: '#FF8427'
-  on-primary-container: '#3c7100'
-  inverse-primary: '#386a00'
-  secondary: '#c8c6c5'
-  on-secondary: '#313030'
-  secondary-container: '#474746'
-  on-secondary-container: '#b7b5b4'
-  tertiary: '#ffffff'
-  on-tertiary: '#003354'
-  tertiary-container: '#cfe5ff'
-  on-tertiary-container: '#0e69a4'
-  error: '#ffb4ab'
-  on-error: '#690005'
-  error-container: '#93000a'
-  on-error-container: '#ffdad6'
+  on-primary-container: '#3D1A00'
+  inverse-primary: '#FFBD47'
+  secondary: '#5C5347'
+  on-secondary: '#FFFFFF'
+  secondary-container: '#F3E6D3'
+  on-secondary-container: '#3D3226'
+  tertiary: '#B22600'
+  on-tertiary: '#FFFFFF'
+  tertiary-container: '#FBD9CB'
+  on-tertiary-container: '#5C1200'
+  error: '#B3261E'
+  on-error: '#FFFFFF'
+  error-container: '#F9DEDC'
+  on-error-container: '#410E0B'
   primary-fixed: '#FFBD47'
   primary-fixed-dim: '#FFBD47'
-  on-primary-fixed: '#0d2000'
-  on-primary-fixed-variant: '#295000'
-  secondary-fixed: '#e5e2e1'
-  secondary-fixed-dim: '#c8c6c5'
-  on-secondary-fixed: '#1c1b1b'
-  on-secondary-fixed-variant: '#474746'
-  tertiary-fixed: '#cfe5ff'
-  tertiary-fixed-dim: '#98cbff'
-  on-tertiary-fixed: '#001d33'
-  on-tertiary-fixed-variant: '#004a77'
-  background: '#131313'
-  on-background: '#e5e2e1'
-  surface-variant: '#353534'
+  on-primary-fixed: '#3D1A00'
+  on-primary-fixed-variant: '#7A3B00'
+  secondary-fixed: '#241C13'
+  secondary-fixed-dim: '#5C5347'
+  on-secondary-fixed: '#FFFCF8'
+  on-secondary-fixed-variant: '#3D3226'
+  tertiary-fixed: '#FBD9CB'
+  tertiary-fixed-dim: '#F2B49A'
+  on-tertiary-fixed: '#3D0F00'
+  on-tertiary-fixed-variant: '#7A2400'
+  background: '#FFFCF8'
+  on-background: '#241C13'
+  surface-variant: '#F3E6D3'
   neon-lime: '#FFBD47'
-  deep-charcoal: '#0F0F0F'
-  subtle-gray: '#666666'
-  surface-border: '#262626'
+  deep-charcoal: '#1A130B'
+  subtle-gray: '#726249'
+  surface-border: '#E9DCC7'
+  accent-red: '#B22600'
+  accent-orange: '#FF8427'
+  accent-red-orange: '#E84C22'
+  accent-terracotta: '#B64926'
+  accent-mustard: '#CC9900'
+  accent-warm-gray: '#5C5347'
 typography:
   display-lg:
     fontFamily: Plus Jakarta Sans
@@ -115,48 +121,41 @@ spacing:
 ---
 
 ## Brand & Style
-This design system is tailored for an elite IT & Programming specialist. It blends a **High-Contrast / Bold** aesthetic with a refined **Modern** layout. The visual narrative focuses on "Expertise in the Shadows"—using a deep, dark canvas to make technical achievements and programming prowess vibrate with energy.
+This design system mirrors the visual identity of Robert's résumé: a warm, paper-like canvas with a friendly illustrated portrait and bold color-coded section markers. It trades the earlier "dark mode developer" narrative for an approachable, human, **editorial** feel — closer to a printed CV than a terminal.
 
-The target audience includes tech recruiters, CTOs, and project managers looking for high-end PHP and systems development. The UI should evoke a sense of precision, technical mastery, and "always-on" availability. It utilizes the raw power of neon accents against charcoal backdrops to signify a cutting-edge developer environment.
+The target audience remains tech recruiters, CTOs, and project managers, but the tone shifts from "expertise in the shadows" to "expertise you can sit down and read comfortably." Warm neutrals and a confident red/amber accent pair replace neon-on-charcoal.
 
 ## Colors
-The palette is dominated by a true-dark background (`#0A0A0A`) to reduce eye strain and provide maximum contrast for code-heavy content. 
+The palette is dominated by a soft off-white canvas (`#FFFCF8`) — never stark white — to echo the paper tone of the résumé.
 
-- **Primary (Warm Amber, `#FFBD47`):** Reserved for the most important Calls to Action (CTAs), primary headings, and critical "active" states. It represents the "pulse" of the application.
-- **Secondary (Deep Charcoal):** Used for card surfaces and container backgrounds to create subtle depth without breaking the dark immersion.
-- **Tertiary (Workana Blue):** A legacy nod to the developer's professional roots, used sparingly for secondary links or technical tags.
-- **Neutral:** A range of grays used for supporting text to maintain a clear visual hierarchy.
+- **Accent Red (`#B22600`):** The signature color lifted directly from the CV's section headers. Used for eyebrow labels ("Specialties", "Projects", "About"), hover states on links/icons, and any small text or border sitting on the light canvas.
+- **Warm Amber (`#FFBD47`):** Used exclusively as a solid fill — primary CTA buttons, the language-toggle active pill, and the decorative circles around the portrait. Never used as text or a thin border on the light background (fails contrast).
+- **Supporting warm circle palette:** Orange (`#FF8427`), red-orange (`#E84C22`), terracotta (`#B64926`), mustard (`#CC9900`) and a warm gray (`#5C5347`) — used for the decorative circles behind the hero portrait and the per-section icon badges, echoing the CV header illustration.
+- **Deep charcoal (`#1A130B`):** Reserved for dark scrims over photographs (project thumbnail hover overlays, modal gallery controls) — never used as a page background anymore.
+- **Neutral text:** `on-surface` (#241C13) for body copy, `secondary`/`subtle-gray` warm grays for de-emphasized text — all tuned to pass WCAG AA (4.5:1+) against the cream canvas.
 
 ## Typography
-The system uses **Plus Jakarta Sans** for its modern, approachable yet highly geometric structure, ensuring the "Rober Y." brand feels professional and contemporary. 
-
-To emphasize the technical nature of IT and Programming, **JetBrains Mono** is introduced for labels, skill tags, and metadata. This creates a functional contrast between the "narrative" of the portfolio and the "technical data" of the skills. Headlines use aggressive negative letter-spacing and heavy weights to command attention.
+Unchanged: **Plus Jakarta Sans** for headings and body copy, **JetBrains Mono** for skill tags/metadata labels. The pairing still reads as professional and technical, now on a warmer canvas.
 
 ## Layout & Spacing
-The layout follows a **Fixed Grid** model on desktop (12 columns, 1200px max-width) to ensure the portfolio feels like a curated gallery. 
-
-- **Vertical Rhythm:** Large vertical gaps (`120px`) between sections are essential to give the dark design "room to breathe" and prevent it from feeling claustrophobic.
-- **Mobile Adaptation:** On mobile, margins shrink to `20px`, and section gaps reduce to `64px`. Content reflows into a single-column vertical stack. 
-- **Grouping:** Use the `stack-sm` unit for related metadata (e.g., Name + Hourly Rate) and `stack-md` for distinct content blocks (e.g., Headline + Body Text).
+Layout structure is unchanged (12-column desktop grid, 1200px max-width, `120px` section gaps, `20px` mobile margins). The hero section was restructured into two columns: copy + CTAs on one side, the illustrated portrait ringed by decorative color circles on the other (mirroring the CV header layout).
 
 ## Elevation & Depth
-In this dark-themed system, depth is conveyed through **Tonal Layering** rather than heavy shadows. 
+Depth now comes from soft warm-cream tonal layers instead of dark tonal layers:
 
-- **Base Level:** `#0A0A0A` (The background canvas).
-- **Surface Level:** `#1A1A1A` (Cards, project containers).
-- **Interaction Level:** `#262626` (Hover states on cards).
+- **Base Level:** `#FFFCF8` (page canvas).
+- **Surface Level:** `#FBF5EC` (cards, chips, mobile nav).
+- **Footer Level:** `#F7EEE2` (slightly deeper cream to ground the page).
 
-Shadows, when used, are extreme-low-opacity black glows that serve to slightly separate cards from the background. High-contrast **Warm Amber** outlines (1px) are used to indicate focus states and primary interactive boundaries, creating a "glowing wireframe" effect that feels technical and precise.
+Borders are thin, warm, and light (`#E9DCC7`) rather than dark hairlines. Hover "glow" effects on cards/buttons use a soft accent-red halo instead of a neon-amber one, since amber doesn't read against the light canvas.
 
 ## Shapes
-The shape language is **Rounded**, utilizing a `0.5rem` (8px) base radius for most containers and a full **Pill** shape for tags and skill chips. This softens the aggressive high-contrast color palette, making the professional profile feel more approachable. 
-
-Cards and large sections should use the `rounded-xl` (24px) setting to create a modern, app-like feel.
+Unchanged: **Rounded** language, `0.5rem` base radius, full pill shape for tags and skill chips, `rounded-xl` for larger cards. Section eyebrows now carry a small circular icon badge (filled with an accent color, white icon glyph) directly lifted from the CV's icon+heading pattern.
 
 ## Components
-- **Primary Buttons:** Solid **Warm Amber** (`#FFBD47`) background with black text (`#000000`). No border. High-impact for "Hire Me" or "View Project."
-- **Secondary Buttons:** Ghost style with a 1px border of `#666666` and white text. On hover, the border and text transition to the primary amber color.
-- **Skill Chips:** Dark background (`#1A1A1A`) with subtle white or tertiary blue text. These should use the **JetBrains Mono** font.
-- **Project Cards:** Deep charcoal backgrounds with a subtle transition to a 1px Warm Amber border on hover. 
-- **Input Fields:** Bottom-border only or very subtle dark-gray backgrounds. Focus state must trigger a Warm Amber glow/border.
-- **Experience Timeline:** A vertical 2px line in `#262626` with Neon Lime nodes for each career milestone (e.g., PHP Developer roles).
+- **Primary Buttons:** Solid **Warm Amber** (`#FFBD47`) background with dark text (`#1A130B`). Hover shifts fill to **Orange** (`#FF8427`).
+- **Secondary Buttons:** Ghost style with a light warm border; hover transitions border/text to **Accent Red**.
+- **Section Eyebrows:** Small circular icon badge (amber/terracotta/red fill + white icon) followed by bold uppercase **Accent Red** label — mirrors the CV's icon-plus-heading rows.
+- **Skill Chips:** Cream background (`#FBF5EC`) with warm border and warm-gray text; border highlights red on hover.
+- **Project Cards:** Light cream surfaces; image thumbnails keep a dark scrim overlay on hover (for legibility over photos) with an amber "View gallery" label; card title turns accent red on hover.
+- **Hero Portrait:** Circular illustrated portrait framed by 7 decorative circles in the CV's warm palette, replacing the old dark network-graph banner.

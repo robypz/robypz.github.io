@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en">
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Robert Yepez - PHP &amp; Laravel Developer Portfolio</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var wantsDark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (wantsDark) document.documentElement.classList.add("dark");
+    })();
+  </script>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap"
@@ -22,57 +29,63 @@
       theme: {
         extend: {
           "colors": {
-            "surface-container-high": "#2a2a2a",
-            "surface": "#131313",
-            "tertiary-fixed": "#cfe5ff",
-            "on-tertiary-fixed": "#001d33",
-            "tertiary-fixed-dim": "#98cbff",
-            "on-secondary": "#313030",
-            "error-container": "#93000a",
-            "on-primary": "#1a3700",
-            "on-secondary-container": "#b7b5b4",
-            "secondary": "#c8c6c5",
+            "surface-container-high": "var(--surface-container-high)",
+            "surface": "var(--surface)",
+            "tertiary-fixed": "#FBD9CB",
+            "on-tertiary-fixed": "#3D0F00",
+            "tertiary-fixed-dim": "#F2B49A",
+            "on-secondary": "#FFFFFF",
+            "error-container": "#F9DEDC",
+            "on-primary": "#FFFFFF",
+            "on-secondary-container": "#3D3226",
+            "secondary": "var(--secondary)",
             "surface-tint": "#FFBD47",
-            "surface-border": "#262626",
+            "surface-border": "var(--surface-border)",
             "primary-fixed": "#FFBD47",
-            "on-primary-container": "#3c7100",
-            "on-secondary-fixed-variant": "#474746",
-            "tertiary": "#ffffff",
-            "error": "#ffb4ab",
-            "secondary-fixed-dim": "#c8c6c5",
-            "outline-variant": "#404a36",
-            "inverse-on-surface": "#313030",
-            "surface-variant": "#353534",
-            "inverse-primary": "#386a00",
-            "surface-bright": "#3a3939",
-            "surface-container-lowest": "#0e0e0e",
-            "deep-charcoal": "#0F0F0F",
-            "secondary-container": "#474746",
-            "surface-container-low": "#1c1b1b",
-            "surface-container": "#201f1f",
-            "on-primary-fixed": "#0d2000",
+            "on-primary-container": "#3D1A00",
+            "on-secondary-fixed-variant": "#3D3226",
+            "tertiary": "#B22600",
+            "error": "#B3261E",
+            "secondary-fixed-dim": "#5C5347",
+            "outline-variant": "#E9DCC7",
+            "inverse-on-surface": "#FFFCF8",
+            "surface-variant": "#F3E6D3",
+            "inverse-primary": "#FFBD47",
+            "surface-bright": "#FFFFFF",
+            "surface-container-lowest": "var(--surface-container-lowest)",
+            "deep-charcoal": "#1A130B",
+            "secondary-container": "#F3E6D3",
+            "surface-container-low": "#FBF5EC",
+            "surface-container": "var(--surface-container)",
+            "on-primary-fixed": "#3D1A00",
             "neon-lime": "#FFBD47",
-            "on-error-container": "#ffdad6",
+            "on-error-container": "#410E0B",
             "primary-container": "#FF8427",
-            "surface-container-highest": "#353534",
-            "outline": "#8a947d",
-            "on-tertiary-fixed-variant": "#004a77",
-            "on-primary-fixed-variant": "#295000",
-            "on-tertiary": "#003354",
-            "on-tertiary-container": "#0e69a4",
-            "background": "#131313",
-            "on-error": "#690005",
-            "on-surface-variant": "#c0cab1",
-            "on-background": "#e5e2e1",
-            "inverse-surface": "#e5e2e1",
-            "surface-dim": "#131313",
-            "subtle-gray": "#666666",
-            "tertiary-container": "#cfe5ff",
-            "on-surface": "#e5e2e1",
-            "secondary-fixed": "#e5e2e1",
-            "on-secondary-fixed": "#1c1b1b",
+            "surface-container-highest": "#EEDDC4",
+            "outline": "#C9BBA3",
+            "on-tertiary-fixed-variant": "#7A2400",
+            "on-primary-fixed-variant": "#7A3B00",
+            "on-tertiary": "#FFFFFF",
+            "on-tertiary-container": "#5C1200",
+            "background": "var(--background)",
+            "on-error": "#FFFFFF",
+            "on-surface-variant": "#5C5347",
+            "on-background": "#241C13",
+            "inverse-surface": "#241C13",
+            "surface-dim": "#FFFCF8",
+            "subtle-gray": "var(--subtle-gray)",
+            "tertiary-container": "#FBD9CB",
+            "on-surface": "var(--on-surface)",
+            "secondary-fixed": "#241C13",
+            "on-secondary-fixed": "#FFFCF8",
             "primary-fixed-dim": "#FFBD47",
-            "primary": "#ffffff"
+            "primary": "var(--primary)",
+            "accent-red": "var(--accent-red)",
+            "accent-orange": "#FF8427",
+            "accent-red-orange": "#E84C22",
+            "accent-terracotta": "var(--accent-terracotta)",
+            "accent-mustard": "#CC9900",
+            "accent-warm-gray": "#5C5347"
           },
           "borderRadius": {
             "DEFAULT": "0.25rem",
@@ -114,10 +127,43 @@
     }
   </script>
   <style>
+    :root {
+      --background: #FFFCF8;
+      --surface: #FFFFFF;
+      --surface-container: #FBF5EC;
+      --surface-container-high: #F3E6D3;
+      --surface-container-lowest: #F7EEE2;
+      --surface-border: #E9DCC7;
+      --on-surface: #241C13;
+      --primary: #211A14;
+      --secondary: #5C5347;
+      --subtle-gray: #726249;
+      --accent-red: #B22600;
+      --accent-red-rgb: 178, 38, 0;
+      --accent-terracotta: #B64926;
+    }
+
+    html.dark {
+      --background: #000000;
+      --surface: #0A0A0A;
+      --surface-container: #120F0C;
+      --surface-container-high: #1C1712;
+      --surface-container-lowest: #0A0806;
+      --surface-border: #2A231C;
+      --on-surface: #F5F0EA;
+      --primary: #F7F2EC;
+      --secondary: #C9BEB0;
+      --subtle-gray: #8F8577;
+      --accent-red: #E84C22;
+      --accent-red-rgb: 232, 76, 34;
+      --accent-terracotta: #E2734A;
+    }
+
     body {
-      background-color: #0A0A0A;
-      color: #ffffff;
+      background-color: var(--background);
+      color: var(--on-surface);
       -webkit-font-smoothing: antialiased;
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
 
     html {
@@ -137,19 +183,8 @@
       }
     }
 
-    .hero-gradient {
-      background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #0A0A0A 100%);
-    }
-
-    .hero-banner {
-      background-image:
-        linear-gradient(180deg, rgba(10, 10, 10, 0.35) 0%, rgba(10, 10, 10, 0.15) 35%, #0A0A0A 100%),
-        url('assets/hero-bg.svg');
-      background-size: cover;
-      background-position: center;
-      border: 1px solid #1e2c38;
-      border-radius: 1.5rem;
-      box-shadow: 0 0 40px rgba(255, 189, 71, 0.08);
+    .hero-blob {
+      background: radial-gradient(circle at 30% 30%, rgba(255, 189, 71, 0.35) 0%, rgba(255, 189, 71, 0) 70%);
     }
 
     .glow-border {
@@ -158,13 +193,13 @@
     }
 
     .glow-border:hover {
-      border-color: #FFBD47;
-      box-shadow: 0 0 15px rgba(255, 189, 71, 0.18);
+      border-color: var(--accent-red);
+      box-shadow: 0 0 15px rgba(var(--accent-red-rgb), 0.18);
     }
 
     /* --- Project modal --- */
     .modal-backdrop {
-      background: rgba(5, 5, 5, 0.8);
+      background: rgba(26, 19, 11, 0.75);
       backdrop-filter: blur(6px);
     }
 
@@ -177,12 +212,12 @@
     }
 
     #modal-thumbs::-webkit-scrollbar-thumb {
-      background: #262626;
+      background: var(--surface-border);
       border-radius: 9999px;
     }
 
     .thumb-active {
-      border-color: #FFBD47 !important;
+      border-color: var(--accent-red) !important;
       opacity: 1 !important;
     }
 
@@ -204,7 +239,7 @@
 
     /* --- Mobile bottom nav interaction --- */
     .nav-item {
-      color: #666666;
+      color: var(--subtle-gray);
       transition: color .25s ease, transform .15s ease;
       -webkit-tap-highlight-color: transparent;
     }
@@ -214,7 +249,7 @@
     }
 
     #mobile-nav .nav-item:hover {
-      color: #FFBD47;
+      color: var(--accent-red);
     }
 
     #mobile-nav .nav-item:active {
@@ -222,13 +257,13 @@
     }
 
     #mobile-nav .nav-item.nav-active {
-      color: #FFBD47;
+      color: var(--accent-red);
       transform: scale(1.08);
     }
 
     #mobile-nav .nav-item.nav-active .material-symbols-outlined {
       font-variation-settings: 'FILL' 1;
-      filter: drop-shadow(0 0 8px rgba(255, 189, 71, .8));
+      filter: drop-shadow(0 0 8px rgba(var(--accent-red-rgb), .5));
     }
 
     #mobile-nav .nav-item.nav-tap .material-symbols-outlined {
@@ -237,16 +272,16 @@
 
     @keyframes navPulse {
       0% {
-        filter: drop-shadow(0 0 0 rgba(255, 189, 71, 0));
+        filter: drop-shadow(0 0 0 rgba(var(--accent-red-rgb), 0));
       }
 
       45% {
-        filter: drop-shadow(0 0 14px rgba(255, 189, 71, .95));
+        filter: drop-shadow(0 0 14px rgba(var(--accent-red-rgb), .7));
         transform: scale(1.25);
       }
 
       100% {
-        filter: drop-shadow(0 0 8px rgba(255, 189, 71, .6));
+        filter: drop-shadow(0 0 8px rgba(var(--accent-red-rgb), .45));
         transform: scale(1);
       }
     }
@@ -258,28 +293,31 @@
   </style>
 </head>
 
-<body class="bg-deep-charcoal min-h-screen flex flex-col font-body-md text-on-surface">
+<body class="bg-background min-h-screen flex flex-col font-body-md text-on-surface">
   <!-- TopAppBar -->
   <header
     class="fixed top-0 w-full z-50 bg-surface dark:bg-surface border-b border-surface-border flex justify-between items-center px-gutter h-16">
     <div class="flex items-center gap-3">
-      <img alt="Robert Yepez Avatar" class="w-8 h-8 rounded-full object-cover border border-surface-border"
-        data-alt="A highly detailed professional headshot of a male IT specialist in his late 30s, dramatic high-contrast studio lighting, dark charcoal background with a subtle rim light on his shoulders. He looks confident, wearing a dark minimal tech shirt. Cinematic, modern dark mode aesthetic."
-        src="assets/profile.jpg" />
+      <img alt="Robert Yepez Avatar" class="w-8 h-8 rounded-full object-cover object-top border border-surface-border"
+        src="assets/portrait-illustration.jpg" />
       <span class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-primary">ROBERT
         YEPEZ</span>
     </div>
     <nav class="hidden md:flex items-center gap-7">
       <a href="#inicio" data-i18n="nav-home"
-        class="font-label-caps text-label-caps uppercase tracking-widest text-secondary hover:text-neon-lime transition-colors">Home</a>
+        class="font-label-caps text-label-caps uppercase tracking-widest text-secondary hover:text-accent-red transition-colors">Home</a>
       <a href="#proyectos" data-i18n="nav-projects"
-        class="font-label-caps text-label-caps uppercase tracking-widest text-secondary hover:text-neon-lime transition-colors">Projects</a>
+        class="font-label-caps text-label-caps uppercase tracking-widest text-secondary hover:text-accent-red transition-colors">Projects</a>
       <a href="#about" data-i18n="nav-about"
-        class="font-label-caps text-label-caps uppercase tracking-widest text-secondary hover:text-neon-lime transition-colors">About</a>
+        class="font-label-caps text-label-caps uppercase tracking-widest text-secondary hover:text-accent-red transition-colors">About</a>
       <a href="#contact" data-i18n="nav-contact"
-        class="font-label-caps text-label-caps uppercase tracking-widest text-secondary hover:text-neon-lime transition-colors">Contact</a>
+        class="font-label-caps text-label-caps uppercase tracking-widest text-secondary hover:text-accent-red transition-colors">Contact</a>
     </nav>
     <div class="flex items-center gap-4">
+      <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
+        class="text-secondary hover:text-accent-red transition-colors flex items-center">
+        <span id="theme-toggle-icon" class="material-symbols-outlined">dark_mode</span>
+      </button>
       <div id="lang-toggle" class="flex items-center border border-surface-border rounded-full overflow-hidden mr-1">
         <button type="button" data-lang="en"
           class="lang-opt px-2.5 py-1 font-label-code text-[12px] font-bold transition-colors">EN</button>
@@ -287,21 +325,21 @@
           class="lang-opt px-2.5 py-1 font-label-code text-[12px] font-bold transition-colors">ES</button>
       </div>
       <a href="https://github.com/robypz" target="_blank" rel="noopener" aria-label="GitHub"
-        class="text-secondary hover:text-neon-lime transition-colors">
+        class="text-secondary hover:text-accent-red transition-colors">
         <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
           <path
             d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.01-.02-1.98-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56C20.71 21.38 24 17.08 24 12 24 5.73 18.77.5 12 .5z" />
         </svg>
       </a>
       <a href="https://www.linkedin.com/in/robypz/" target="_blank" rel="noopener" aria-label="LinkedIn"
-        class="text-secondary hover:text-neon-lime transition-colors">
+        class="text-secondary hover:text-accent-red transition-colors">
         <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
           <path
             d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
         </svg>
       </a>
       <a href="mailto:robertyepez0208@gmail.com" aria-label="Email"
-        class="text-secondary hover:text-neon-lime transition-colors flex items-center">
+        class="text-secondary hover:text-accent-red transition-colors flex items-center">
         <span class="material-symbols-outlined">mail</span>
       </a>
     </div>
@@ -309,81 +347,110 @@
   <!-- Main Content -->
   <main class="flex-grow pt-16 pb-24 md:pb-0 px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full">
     <!-- Hero Section -->
-    <section id="inicio"
-      class="relative hero-banner mt-4 px-6 pt-16 pb-20 md:pt-24 md:pb-24 flex flex-col items-center text-center overflow-hidden">
-      <div class="relative z-10 flex flex-col items-center gap-stack-md">
-        <span data-i18n="hero-kicker"
-          class="font-label-caps text-label-caps text-neon-lime tracking-widest uppercase">PHP &amp; Laravel
-          Developer</span>
-        <h1 data-i18n="hero-title"
-          class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary font-bold max-w-2xl leading-tight">
-          Freelancer expert in IT &amp; Programming
-        </h1>
-        <p data-i18n="hero-sub" class="font-body-lg text-body-lg text-secondary max-w-xl">
-          Building robust backends, scalable APIs, and driving data-centric architecture for high-performance
-          applications.
-        </p>
-        <div class="flex flex-col md:flex-row gap-4 items-center mt-4 w-full md:w-auto">
-          <a data-i18n="hero-contact"
-            class="bg-neon-lime text-deep-charcoal font-headline-md text-headline-md px-8 py-3 rounded hover:bg-primary-container transition-colors w-full md:w-auto font-bold flex items-center justify-center"
-            href="mailto:robertyepez0208@gmail.com">
-            CONTACT ME
-          </a>
-          <a data-i18n="hero-view"
-            class="border border-surface-border text-primary font-headline-md text-headline-md px-8 py-3 rounded hover:border-neon-lime hover:text-neon-lime transition-all w-full md:w-auto glow-border flex items-center justify-center"
-            href="#proyectos">VIEW PROJECTS</a>
+    <section id="inicio" class="relative mt-4 pt-12 pb-16 md:pt-16 md:pb-20 overflow-hidden">
+      <div class="hero-blob absolute -top-24 -right-24 w-[420px] h-[420px] rounded-full -z-10"></div>
+      <div class="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
+        <!-- Text column -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left gap-stack-md md:w-3/5">
+          <span data-i18n="hero-kicker"
+            class="font-label-caps text-label-caps text-accent-red font-extrabold tracking-widest uppercase">PHP &amp; Laravel
+            Developer</span>
+          <h1 data-i18n="hero-title"
+            class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary font-bold max-w-2xl leading-tight">
+            Freelancer expert in IT &amp; Programming
+          </h1>
+          <p data-i18n="hero-sub" class="font-body-lg text-body-lg text-secondary max-w-xl">
+            Building robust backends, scalable APIs, and driving data-centric architecture for high-performance
+            applications.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 items-center mt-4 w-full sm:w-auto">
+            <a data-i18n="hero-contact"
+              class="bg-neon-lime text-deep-charcoal font-headline-md text-headline-md px-8 py-3 rounded hover:bg-primary-container transition-colors w-full sm:w-auto font-bold flex items-center justify-center"
+              href="mailto:robertyepez0208@gmail.com">
+              CONTACT ME
+            </a>
+            <a data-i18n="hero-view"
+              class="border border-surface-border text-primary font-headline-md text-headline-md px-8 py-3 rounded hover:border-accent-red hover:text-accent-red transition-all w-full sm:w-auto glow-border flex items-center justify-center"
+              href="#proyectos">VIEW PROJECTS</a>
+          </div>
+        </div>
+        <!-- Illustration column -->
+        <div class="relative w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 shrink-0 flex items-center justify-center">
+          <div class="absolute -top-3 -left-5 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-neon-lime -z-10"></div>
+          <div class="absolute top-14 sm:top-16 -left-8 sm:-left-10 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-accent-red-orange -z-10">
+          </div>
+          <div class="absolute -top-2 -right-3 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-accent-terracotta -z-10"></div>
+          <div class="absolute bottom-8 -left-6 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-accent-warm-gray -z-10"></div>
+          <div class="absolute bottom-0 left-8 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-accent-orange -z-10"></div>
+          <div class="absolute top-1/3 -right-7 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-accent-red -z-10"></div>
+          <div class="absolute bottom-5 -right-4 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-accent-mustard -z-10"></div>
+          <img src="assets/portrait-illustration.jpg" alt="Robert Yepez illustrated portrait"
+            class="relative w-full h-full object-cover rounded-full border-[6px] border-surface shadow-xl" />
         </div>
       </div>
     </section>
     <!-- Specialties Section -->
     <section class="py-20 border-t border-surface-border">
       <div class="flex flex-col gap-stack-sm mb-stack-md">
-        <h2 data-i18n="spec-kicker" class="font-label-caps text-label-caps text-neon-lime uppercase tracking-widest">
-          Specialties</h2>
+        <div class="flex items-center gap-3">
+          <span class="flex items-center justify-center w-10 h-10 rounded-full bg-neon-lime text-deep-charcoal shrink-0">
+            <span class="material-symbols-outlined text-[20px]">bolt</span>
+          </span>
+          <h2 data-i18n="spec-kicker"
+            class="font-label-caps text-label-caps text-accent-red font-extrabold uppercase tracking-widest">
+            Specialties</h2>
+        </div>
         <h3 data-i18n="spec-title" class="font-headline-md text-headline-md text-primary font-bold">Core Technologies
         </h3>
       </div>
       <div class="flex flex-wrap gap-3">
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">PHP
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">PHP
           8+</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">Laravel</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">Laravel</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">MySQL</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">MySQL</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">JavaScript</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">JavaScript</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">Java</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">Java</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">REST
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">REST
           APIs</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">Docker</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">Docker</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">CI/CD</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">CI/CD</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">TypeScript</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">TypeScript</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">Angular</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">Angular</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">Tailwind
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">Tailwind
           CSS</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">Bootstrap</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">Bootstrap</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">MongoDB</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">MongoDB</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">MariaDB</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">MariaDB</span>
         <span
-          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-neon-lime transition-colors">DDD</span>
+          class="bg-surface-container border border-surface-border text-secondary font-label-code text-label-code px-4 py-2 rounded-full hover:border-accent-red transition-colors">DDD</span>
       </div>
     </section>
     <!-- Projects Section -->
     <section class="py-section-gap border-t border-surface-border" id="proyectos">
       <div class="flex flex-col gap-stack-sm mb-stack-md">
-        <h2 data-i18n="proj-kicker" class="font-label-caps text-label-caps text-neon-lime uppercase tracking-widest">
-          Projects</h2>
+        <div class="flex items-center gap-3">
+          <span
+            class="flex items-center justify-center w-10 h-10 rounded-full bg-accent-terracotta text-white shrink-0">
+            <span class="material-symbols-outlined text-[20px]">work</span>
+          </span>
+          <h2 data-i18n="proj-kicker"
+            class="font-label-caps text-label-caps text-accent-red font-extrabold uppercase tracking-widest">
+            Projects</h2>
+        </div>
         <h3 data-i18n="proj-title" class="font-headline-md text-headline-md text-primary font-bold">Featured Work</h3>
         <p data-i18n="proj-intro" class="font-body-md text-body-md text-subtle-gray max-w-xl">Click any project to open
           its gallery, description and links.</p>
@@ -394,8 +461,14 @@
     <section id="about" class="py-section-gap border-t border-surface-border">
       <div class="flex flex-col md:flex-row gap-stack-md md:gap-gutter">
         <div class="flex flex-col gap-stack-sm md:w-1/3">
-          <h2 data-i18n="about-kicker" class="font-label-caps text-label-caps text-neon-lime uppercase tracking-widest">
-            About</h2>
+          <div class="flex items-center gap-3">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-accent-red text-white shrink-0">
+              <span class="material-symbols-outlined text-[20px]">person</span>
+            </span>
+            <h2 data-i18n="about-kicker"
+              class="font-label-caps text-label-caps text-accent-red font-extrabold uppercase tracking-widest">
+              About</h2>
+          </div>
           <h3 data-i18n="about-title" class="font-headline-md text-headline-md text-primary font-bold">Engineering
             systems built to scale.</h3>
         </div>
@@ -406,7 +479,7 @@
             efficient queries, and scalable frameworks that support long-term maintainability.
           </p>
           <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-neon-lime">verified</span>
+            <span class="material-symbols-outlined text-accent-red">verified</span>
             <span data-i18n="about-edu" class="font-label-code text-label-code text-secondary">Computer Engineer · UNERG
               (2017–2022)</span>
           </div>
@@ -443,14 +516,14 @@
     class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-surface-border flex flex-col items-center gap-stack-md py-stack-md px-gutter mb-20 md:mb-0"
     id="contact">
     <div class="flex gap-6">
-      <a class="font-body-md text-body-md text-subtle-gray hover:text-neon-lime transition-colors"
+      <a class="font-body-md text-body-md text-subtle-gray hover:text-accent-red transition-colors"
         href="https://github.com/robypz" target="_blank" rel="noopener">GitHub</a>
-      <a class="font-body-md text-body-md text-subtle-gray hover:text-neon-lime transition-colors"
+      <a class="font-body-md text-body-md text-subtle-gray hover:text-accent-red transition-colors"
         href="https://www.linkedin.com/in/robypz/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="font-body-md text-body-md text-neon-lime underline hover:text-primary transition-colors"
+      <a class="font-body-md text-body-md text-accent-red underline hover:text-primary transition-colors"
         href="https://www.workana.com/" target="_blank" rel="noopener">Workana</a>
       <a data-i18n="footer-email"
-        class="font-body-md text-body-md text-subtle-gray hover:text-neon-lime transition-colors"
+        class="font-body-md text-body-md text-subtle-gray hover:text-accent-red transition-colors"
         href="mailto:robertyepez0208@gmail.com">Email</a>
     </div>
     <p data-i18n="footer-copy" class="font-body-md text-body-md text-subtle-gray">© 2026 ROBERT YEPEZ · PHP &amp;
@@ -494,7 +567,7 @@
           <div class="flex flex-col gap-1">
             <h3 id="modal-title"
               class="font-headline-xl text-headline-md md:text-headline-xl text-primary font-bold leading-tight"></h3>
-            <span id="modal-subtitle" class="font-body-md text-body-md text-neon-lime"></span>
+            <span id="modal-subtitle" class="font-body-md text-body-md text-accent-terracotta"></span>
           </div>
           <div class="flex flex-col gap-1 font-label-code text-label-code text-subtle-gray">
             <span id="modal-client" class="flex items-center gap-2"><span
@@ -672,7 +745,7 @@
         </div>
       </div>
       <div class="flex flex-col gap-1">
-        <h4 class="font-headline-md text-body-lg font-bold text-primary group-hover:text-neon-lime transition-colors">${p.name}</h4>
+        <h4 class="font-headline-md text-body-lg font-bold text-primary group-hover:text-accent-red transition-colors">${p.name}</h4>
         <p class="font-body-md text-secondary text-sm">${p.subtitle[LANG]}</p>
         <div class="flex flex-wrap gap-2 mt-1">
           ${p.tags.slice(0, 4).map(t => `<span class="font-label-code text-[12px] text-subtle-gray border border-surface-border rounded-full px-2 py-0.5">${t}</span>`).join("")}
@@ -758,6 +831,25 @@
       if (e.key === "ArrowRight") setImage(current.index + 1);
       if (e.key === "ArrowLeft") setImage(current.index - 1);
     });
+
+    /* ---------- Theme switch (light / dark) ---------- */
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const themeToggleIcon = document.getElementById("theme-toggle-icon");
+
+    function applyTheme(theme) {
+      document.documentElement.classList.toggle("dark", theme === "dark");
+      localStorage.setItem("theme", theme);
+      themeToggleIcon.textContent = theme === "dark" ? "light_mode" : "dark_mode";
+      themeToggleBtn.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    }
+
+    themeToggleBtn.addEventListener("click", () => {
+      const isDark = document.documentElement.classList.contains("dark");
+      applyTheme(isDark ? "light" : "dark");
+    });
+
+    // sync icon with whatever the anti-flash script already applied
+    applyTheme(document.documentElement.classList.contains("dark") ? "dark" : "light");
 
     /* ---------- Language switch (EN / ES) ---------- */
     function applyLang(lang) {
