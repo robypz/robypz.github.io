@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" preserveAspectRatio="xMidYMid slice">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#101f2c"/>
-      <stop offset="55%" stop-color="#0c1722"/>
+      <stop offset="0%" stop-color="#241608"/>
+      <stop offset="55%" stop-color="#170f08"/>
       <stop offset="100%" stop-color="#0A0A0A"/>
     </linearGradient>
     <radialGradient id="glowA" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#8FBCDD" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#8FBCDD" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#FFBD47" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FFBD47" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glowB" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#5e93ba" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#5e93ba" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#B64926" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#B64926" stop-opacity="0"/>
     </radialGradient>
     <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="38"/>
     </filter>
     <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse">
-      <path d="M46 0H0V46" fill="none" stroke="#8FBCDD" stroke-opacity="0.06" stroke-width="1"/>
+      <path d="M46 0H0V46" fill="none" stroke="#FFBD47" stroke-opacity="0.06" stroke-width="1"/>
     </pattern>
   </defs>
 
@@ -30,7 +30,7 @@
   <circle cx="980" cy="90" r="160" fill="url(#glowA)" filter="url(#soft)"/>
 
   <!-- node network -->
-  <g stroke="#8FBCDD" stroke-opacity="0.28" stroke-width="1.4">
+  <g stroke="#FFBD47" stroke-opacity="0.28" stroke-width="1.4">
     <line x1="150" y1="160" x2="380" y2="90"/>
     <line x1="380" y1="90" x2="560" y2="220"/>
     <line x1="560" y1="220" x2="800" y2="140"/>
@@ -44,7 +44,7 @@
     <line x1="420" y1="320" x2="640" y2="420"/>
     <line x1="150" y1="160" x2="220" y2="380"/>
   </g>
-  <g fill="#8FBCDD">
+  <g fill="#FFBD47">
     <circle cx="150" cy="160" r="5"/>
     <circle cx="380" cy="90" r="6"/>
     <circle cx="560" cy="220" r="5"/>
@@ -58,7 +58,7 @@
     <circle cx="220" cy="380" r="4"/>
     <circle cx="980" cy="90" r="4"/>
   </g>
-  <g fill="#8FBCDD" fill-opacity="0.18">
+  <g fill="#FFBD47" fill-opacity="0.18">
     <circle cx="800" cy="140" r="16"/>
     <circle cx="380" cy="90" r="14"/>
     <circle cx="1040" cy="250" r="14"/>

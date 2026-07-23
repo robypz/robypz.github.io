@@ -15,10 +15,10 @@ colors:
   inverse-on-surface: '#313030'
   outline: '#8a947d'
   outline-variant: '#404a36'
-  surface-tint: '#83dd2b'
+  surface-tint: '#FFBD47'
   primary: '#ffffff'
   on-primary: '#1a3700'
-  primary-container: '#9efa49'
+  primary-container: '#FF8427'
   on-primary-container: '#3c7100'
   inverse-primary: '#386a00'
   secondary: '#c8c6c5'
@@ -33,8 +33,8 @@ colors:
   on-error: '#690005'
   error-container: '#93000a'
   on-error-container: '#ffdad6'
-  primary-fixed: '#9efa49'
-  primary-fixed-dim: '#83dd2b'
+  primary-fixed: '#FFBD47'
+  primary-fixed-dim: '#FFBD47'
   on-primary-fixed: '#0d2000'
   on-primary-fixed-variant: '#295000'
   secondary-fixed: '#e5e2e1'
@@ -48,7 +48,7 @@ colors:
   background: '#131313'
   on-background: '#e5e2e1'
   surface-variant: '#353534'
-  neon-lime: '#A2FF4D'
+  neon-lime: '#FFBD47'
   deep-charcoal: '#0F0F0F'
   subtle-gray: '#666666'
   surface-border: '#262626'
@@ -122,7 +122,7 @@ The target audience includes tech recruiters, CTOs, and project managers looking
 ## Colors
 The palette is dominated by a true-dark background (`#0A0A0A`) to reduce eye strain and provide maximum contrast for code-heavy content. 
 
-- **Primary (Neon Lime):** Reserved for the most important Calls to Action (CTAs), primary headings, and critical "active" states. It represents the "pulse" of the application.
+- **Primary (Warm Amber, `#FFBD47`):** Reserved for the most important Calls to Action (CTAs), primary headings, and critical "active" states. It represents the "pulse" of the application.
 - **Secondary (Deep Charcoal):** Used for card surfaces and container backgrounds to create subtle depth without breaking the dark immersion.
 - **Tertiary (Workana Blue):** A legacy nod to the developer's professional roots, used sparingly for secondary links or technical tags.
 - **Neutral:** A range of grays used for supporting text to maintain a clear visual hierarchy.
@@ -146,7 +146,7 @@ In this dark-themed system, depth is conveyed through **Tonal Layering** rather 
 - **Surface Level:** `#1A1A1A` (Cards, project containers).
 - **Interaction Level:** `#262626` (Hover states on cards).
 
-Shadows, when used, are extreme-low-opacity black glows that serve to slightly separate cards from the background. High-contrast **Neon Lime** outlines (1px) are used to indicate focus states and primary interactive boundaries, creating a "glowing wireframe" effect that feels technical and precise.
+Shadows, when used, are extreme-low-opacity black glows that serve to slightly separate cards from the background. High-contrast **Warm Amber** outlines (1px) are used to indicate focus states and primary interactive boundaries, creating a "glowing wireframe" effect that feels technical and precise.
 
 ## Shapes
 The shape language is **Rounded**, utilizing a `0.5rem` (8px) base radius for most containers and a full **Pill** shape for tags and skill chips. This softens the aggressive high-contrast color palette, making the professional profile feel more approachable. 
@@ -154,9 +154,9 @@ The shape language is **Rounded**, utilizing a `0.5rem` (8px) base radius for mo
 Cards and large sections should use the `rounded-xl` (24px) setting to create a modern, app-like feel.
 
 ## Components
-- **Primary Buttons:** Solid **Neon Lime** (`#A2FF4D`) background with black text (`#000000`). No border. High-impact for "Hire Me" or "View Project."
-- **Secondary Buttons:** Ghost style with a 1px border of `#666666` and white text. On hover, the border and text transition to the primary neon color.
+- **Primary Buttons:** Solid **Warm Amber** (`#FFBD47`) background with black text (`#000000`). No border. High-impact for "Hire Me" or "View Project."
+- **Secondary Buttons:** Ghost style with a 1px border of `#666666` and white text. On hover, the border and text transition to the primary amber color.
 - **Skill Chips:** Dark background (`#1A1A1A`) with subtle white or tertiary blue text. These should use the **JetBrains Mono** font.
-- **Project Cards:** Deep charcoal backgrounds with a subtle transition to a 1px Neon Lime border on hover. 
-- **Input Fields:** Bottom-border only or very subtle dark-gray backgrounds. Focus state must trigger a Neon Lime glow/border.
+- **Project Cards:** Deep charcoal backgrounds with a subtle transition to a 1px Warm Amber border on hover. 
+- **Input Fields:** Bottom-border only or very subtle dark-gray backgrounds. Focus state must trigger a Warm Amber glow/border.
 - **Experience Timeline:** A vertical 2px line in `#262626` with Neon Lime nodes for each career milestone (e.g., PHP Developer roles).
